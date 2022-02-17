@@ -31,4 +31,4 @@ jobs:
      # Compiles classes to test 
       - name: compile classes
         working-directory: ./src
-        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar" /prog5121poe/PROG5121POE.java /prog5121poe/Task.java /prog5121poe/Login.java /prog5121poe/Search.java "../test/prog5121poe/PROG5121POETest.java"  "../test/prog5121poe/SearchTest.java"  "../test/prog5121poe/TaskTest.java" "../test/prog5121poe/LoginTest.java" 
+        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar" ./prog5121poe/PROG5121POE.java ./prog5121poe/Task.java ./prog5121poe/Login.java ./prog5121poe/Search.java "../test/prog5121poe/PROG5121POETest.java"  "../test/prog5121poe/SearchTest.java"  "../test/prog5121poe/TaskTest.java" "../test/prog5121poe/LoginTest.java" 
