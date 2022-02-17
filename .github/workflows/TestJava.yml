@@ -33,7 +33,23 @@ jobs:
         working-directory: ./src
         run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar" ./prog5121poe/PROG5121POE.java ./prog5121poe/Task.java ./prog5121poe/Login.java ./prog5121poe/Search.java "../test/prog5121poe/PROG5121POETest.java"  "../test/prog5121poe/SearchTest.java"  "../test/prog5121poe/TaskTest.java" "../test/prog5121poe/LoginTest.java" 
 
- # list contents of src to verify that classess compiled 
+    # list contents of src to verify that classess compiled 
       - name: List contents of src directory after compile
-        working-directory: ./src/prog5121poetest
+        working-directory: ./src/prog5121
         run: ls
+        
+        
+       # copy compiled classes to test directory 
+      - name : copy compiled classes to test directory 
+        working-directory: ./src/prog5121poe
+        run: cp -t  "../../test/prog5121poe/" sTasks.class Search.class Login.class
+        
+        # list contents or directory
+      - name: List contents test package
+        working-directory: ./test/prog5121poe
+        run: ls
+        
+        #run tests and output report 
+      - name: run tests and create report 
+        working-directory: ./test
+        run: java -jar "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class ./prog5121poeTestLogin --reports-dir ="reports"
