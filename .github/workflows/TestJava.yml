@@ -42,7 +42,7 @@ jobs:
        # copy compiled classes to test directory 
       - name : copy compiled classes to test directory 
         working-directory: ./src/prog5121poe
-        run: cp -t  "../../test/prog5121poe/" sTasks.class Search.class Login.class
+        run: cp -t  "../../test/prog5121poe/" Tasks.class Search.class Login.class
         
         # list contents or directory
       - name: List contents test package
