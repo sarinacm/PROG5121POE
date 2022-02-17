@@ -35,7 +35,7 @@ jobs:
 
     # list contents of src to verify that classess compiled 
       - name: List contents of src directory after compile
-        working-directory: ./src/prog5121
+        working-directory: ./src/prog5121poe
         run: ls
         
         
