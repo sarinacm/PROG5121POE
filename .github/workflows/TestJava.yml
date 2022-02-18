@@ -57,5 +57,5 @@ jobs:
         #run tests and output report 
       - name: run tests and create report 
         working-directory: ./test
-        run: java -jar "../testresources/junit-platform-suite-commons-1.8.2.jar:../testresources/junit-platform-suite-api-1.8.2.jar:../testresources/junit-platform-suite-engine-1.8.2:../testresources/juniorg.junit.platform.console.ConsoleLauncher " -cp "./prog5121poe" --select-class TaskTest  --reports-dir ="reports"
+        run: java  "../testresources/junit-platform-suite-commons-1.8.2.jar:../testresources/junit-platform-suite-api-1.8.2.jar:../testresources/junit-platform-suite-engine-1.8.2:../testresources/juniorg.junit.platform.console.ConsoleLauncher " -cp "./prog5121poe" --select-class TaskTest  --reports-dir ="reports"
 
