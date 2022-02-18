@@ -64,7 +64,7 @@ jobs:
          java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.SearchTest  --reports-dir "reports" 
 
        #publish report 
-      - name: Publish Unit Test Results
+      - name: Publish Unit Test Results to GH
       - uses: EnricoMi/publish-unit-test-result-action@v1
         if: always()
         with:
