@@ -59,4 +59,4 @@ jobs:
         working-directory: ./test
         run: |
          ls ./prog5121poe
-         java -jar "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "./prog5121poe" --scan-classpath  --reports-dir ="reports"
+         java -jar "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "./prog5121poe" --select class LoginTest  --reports-dir ="reports"
