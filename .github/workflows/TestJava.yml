@@ -51,7 +51,7 @@ jobs:
         
         #run tests and output report 
       - name: run tests and create report 
-        working-directory: ./test/prog5121poe
+        working-directory: ./test
         run: |
-         ls
-         java -jar "../../testresources/junit-platform-console-standalone-1.6.0.jar"   --include-classname=.* --scan-classpath "."  --reports-dir ="reports"
+         ls /prog5121poe
+         java -jar "../../testresources/junit-platform-console-standalone-1.6.0.jar"    --class-path "./prog5121poe" --select-class -c LoginTest  --reports-dir ="reports"
