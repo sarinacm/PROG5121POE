@@ -51,5 +51,5 @@ jobs:
         
         #run tests and output report 
       - name: run tests and create report 
-        working-directory: ./test/prog5121poe
-        run: java -jar "../../testresources/junit-platform-console-standalone-1.6.0.jar" --class-path "./" --scan-classpath  --reports-dir ="reports"
+        working-directory: ./testresources
+        run: java -jar "junit-platform-console-standalone-1.6.0.jar" --class-path "./test/prog5121poe" --scan-classpath  --reports-dir ="reports"
