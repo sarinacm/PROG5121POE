@@ -59,4 +59,4 @@ jobs:
         working-directory: ./test
         run: |
          ls
-         java -jar "../junit-platform-console-standalone-1.6.0.jar" -cp "./prog5121poe" --include-classname "^.*" --scan-classpath  --reports-dir ="reports"
+         java -jar "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "./prog5121poe" --include-classname "^.*" --scan-classpath  --reports-dir ="reports"
