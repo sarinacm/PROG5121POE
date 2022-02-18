@@ -31,7 +31,7 @@ jobs:
      # Compiles classes to test 
       - name: compile classes
         working-directory: ./src
-        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar" ./prog5121poe/PROG5121POE.java ./prog5121poe/Task.java ./prog5121poe/Login.java ./prog5121poe/Search.java "../test/prog5121poe/PROG5121POETest.java"  "../test/prog5121poe/SearchTest.java"  "../test/prog5121poe/TaskTest.java" "../test/prog5121poe/LoginTest.java" 
+        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar" ./prog5121poe/PROG5121POE.java ./prog5121poe/Task.java ./prog5121poe/Login.java ./prog5121poe/Search.java "../test/prog5121poe/PROG5121POETest.java"  "../test/prog5121poe/SearchTest.java"  "../test/prog5121poe/TaskTest.java" "../test/prog5121poe/LoginTest.java" "../test/prog5121poe/PROGPOETest.java"
 
     # list contents of src to verify that classess compiled 
       - name: List contents of src directory after compile
@@ -47,7 +47,7 @@ jobs:
         #copy compiled tests 
       - name : copy compiled Test classes to testresources directory 
         working-directory: ./test/prog5121poe
-        run: cp -t  "../../testresources/" TaskTest.class SearchTest.class LoginTest.class
+        run: cp -t  "../../testresources/" TaskTest.class SearchTest.class LoginTest.class 
         
         # list contents or directory
       - name: List contents test package
