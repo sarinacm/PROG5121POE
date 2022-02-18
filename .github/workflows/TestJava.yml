@@ -30,8 +30,8 @@ jobs:
         run: ls
      # Compiles classes to test 
       - name: compile classes
-        working-directory: ./src/prog5121poe
-        run: javac -cp "../../testresources/junit-platform-console-standalone-1.8.2.jar" PROG5121POE.java Task.java Login.java Search.java "../../test/prog5121poe/PROG5121POETest.java"  "../../test/prog5121poe/SearchTest.java"  "../../test/prog5121poe/TaskTest.java" "../../test/prog5121poe/LoginTest.java" 
+        working-directory: ./src
+        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar" /prog5121poe/PROG5121POE.java /prog5121poe/Task.java /prog5121poe/Login.java /prog5121poe/Search.java "../test/prog5121poe/PROG5121POETest.java"  "../test/prog5121poe/SearchTest.java"  "../test/prog5121poe/TaskTest.java" "../test/prog5121poe/LoginTest.java" 
 
     # list contents of src to verify that classess compiled 
       - name: List contents of src directory after compile
@@ -57,5 +57,5 @@ jobs:
         #run tests and output report 
       - name: run tests and create report 
         working-directory: ./test
-        run: java  "../testresources/junit-platform-suite-commons-1.8.2.jar:../testresources/junit-platform-suite-api-1.8.2.jar:../testresources/junit-platform-suite-engine-1.8.2:../testresources/juniorg.junit.platform.console.ConsoleLauncher " -cp "./prog5121poe" --select-class TaskTest  --reports-dir ="reports"
+        run: java  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "./prog5121poe" --select-class TaskTest  --reports-dir ="reports"
 
