@@ -56,8 +56,8 @@ jobs:
         
         #run tests and output report 
       - name: run tests and create report 
-        working-directory: ./test/prog5121poe
+        working-directory: ./test
         run: |
          ls
-         java -jar  "../../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class TaskTest  --reports-dir ="reports"
+         java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class /prog5121poe/TaskTest  --reports-dir ="reports"
 
