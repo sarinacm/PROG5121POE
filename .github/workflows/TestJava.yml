@@ -60,4 +60,4 @@ jobs:
         run: |
          ls
          java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.TaskTest  --reports-dir ="reports"
-
+         java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.LoginTest  --reports-dir ="reports" 
