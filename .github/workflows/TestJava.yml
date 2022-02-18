@@ -59,4 +59,4 @@ jobs:
         working-directory: ./testresources
         run: |
          ls
-          java -jar "junit-platform-console-standalone-1.6.0.jar" -cp "." --include-classname=.* --select-class LoginTest  --reports-dir ="reports"
+         java -jar "junit-platform-console-standalone-1.6.0.jar" -cp "." --scan-classpath  --reports-dir ="reports"
