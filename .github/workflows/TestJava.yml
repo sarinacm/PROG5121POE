@@ -42,7 +42,7 @@ jobs:
        # copy compiled classes to test directory 
       - name : copy compiled classes to testresources directory 
         working-directory: ./src/prog5121poe
-        run: cp -t  "../../testresources/" Task.class Search.class Login.class
+        run: cp -t  "../../test/prog5121poe" Task.class Search.class Login.class
         
         #copy compiled tests 
       - name : copy compiled Test classes to testresources directory 
@@ -56,7 +56,7 @@ jobs:
         
         #run tests and output report 
       - name: run tests and create report 
-        working-directory: ./testresources
+        working-directory: ./test
         run: |
          ls
-         java -jar "junit-platform-console-standalone-1.6.0.jar" -cp "./" --include-classname "^.*" --scan-classpath  --reports-dir ="reports"
+         java -jar "../junit-platform-console-standalone-1.6.0.jar" -cp "./prog5121poe" --include-classname "^.*" --scan-classpath  --reports-dir ="reports"
