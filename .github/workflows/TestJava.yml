@@ -58,8 +58,8 @@ jobs:
       - name: run tests and create report 
         working-directory: ./test
         run: 
-         java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.TaskTest  --reports-dir "reports"
-         java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.LoginTest  --reports-dir "reports" 
-         java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.SearchTest  --reports-dir "reports" 
+         java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.TaskTest  
+         java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.LoginTest   
+         java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.SearchTest 
 
     
