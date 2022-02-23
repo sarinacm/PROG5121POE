@@ -57,15 +57,9 @@ jobs:
         #run tests and output report 
       - name: run tests and create report 
         working-directory: ./test
-        run: |
-         ls
+        run: 
          java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.TaskTest  --reports-dir "reports"
          java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.LoginTest  --reports-dir "reports" 
          java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.SearchTest  --reports-dir "reports" 
 
-       #publish report to Github 
-      - name: Publish Unit Test Results to GH
-      - uses: EnricoMi/publish-unit-test-result-action@v1
-        if: always()
-        with:
-         files: test-results/**/*.xml
+    
