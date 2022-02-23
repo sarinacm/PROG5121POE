@@ -54,10 +54,25 @@ jobs:
         working-directory: ./test/prog5121poe
         run: ls
         
-        #run tests and output report 
+        #run Login Class tests and output report 
+      - name: run tests and create report 
+        working-directory: ./test
+        run: |
+         ls
+         java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.LoginTest  
+        
+       #run Task Class tests and output report 
       - name: run tests and create report 
         working-directory: ./test
         run: |
          ls
          java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.TaskTest  
         
+        
+             
+       #run Search Class tests and output report 
+      - name: run tests and create report 
+        working-directory: ./test
+        run: |
+         ls
+         java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  prog5121poe.SearchTest  
